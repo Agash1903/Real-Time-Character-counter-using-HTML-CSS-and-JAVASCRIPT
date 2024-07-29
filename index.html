@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chracter counter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Real Time Character Counter</h1>
+        <textarea name="" id="b" placeholder="please write your text here.."></textarea><br>
+        <button onclick="add()">Calculate</button><br>
+         <h2 >Total Character : <span id="txt">0</span></h2>
+         <h2 >Remaining : <span id="remain"> 50</span></h2>
+    </div>
+    <script>
+     function add(){
+        var a=document.getElementById("b").value;
+        
+        var c=a.split("")
+        var d=c.length
+        var rem=50-d
+        document.getElementById("txt").innerHTML=d
+        document.getElementById("remain").innerHTML=rem
+     } 
+    </script>
+    
+</body>
+</html>
